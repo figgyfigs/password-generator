@@ -8,50 +8,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-
-
-
-
-      <div class="slider-container">
-        <div class="slider-value">
-          <span>100</span>
-        </div>
-        <div class="field">
-          <div class="value left">0</div>
-            <input class="slider" type="range" id="my-range" min="0" max="150" value="50" steps="1">
-          <div class="value right">150</div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
+  
+  <div class="slider-container">
+    <div class="slider-value">
+      <span>100</span>
     </div>
+    <div class="field">
+      <div class="value left">0</div>
+        <input class="slider" type="range" id="my-range" min="0" max="200" value="100" steps="1">
+      <div class="value right">200</div>
+    </div>
+  </div>
+
+
     <script src="script.js"></script>
   </body>
 </html>

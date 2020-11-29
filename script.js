@@ -5,6 +5,8 @@ const input_value = document.querySelector("input")
 input_value.oninput = (() => {
   let value = input_value.value;
   slider_value.textContent = value;
+
+  slider_value.style.left = (value / 2) + "%";
 });
 
 // Write password to the #password input
