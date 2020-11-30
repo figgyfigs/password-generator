@@ -10,15 +10,39 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 50px;
   text-align: center;
-  background-color: #664AFF;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+.col-8 {
+  background-color: white;
+  padding: 50px 50px 50px 50px;
+}
+
+.row {
+  height: 100%;
+}
+
+.password-options {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: inherit;
+}
+
+.container-fluid {
+  background-color: #F5A623;
 }
 
 .slider-container {
   height: 80px;
-  width: 380px;  
-  background-color: #fff; 
+  width: 380px;
+  background-color: #fff;
   border-radius: 10px;
   padding: 0 65px 0 45px;
 }
@@ -66,18 +90,18 @@ html, body {
   height: 100%;
 }
 
-.field .value {
+.value {
   position: absolute;
   font-size: 18px;
   font-weight: 600;
   color: #664AFF;
 }
 
-.field .value.left {
+.left {
   left: -22px;
 }
 
-.field .value.right {
+.right {
   right: -43px;
 }
 
@@ -110,4 +134,3 @@ html, body {
   border: 1px solid #664AFF;
   cursor: pointer;
 }
-
