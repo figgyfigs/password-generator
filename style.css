@@ -17,6 +17,10 @@ h1 {
   margin-top: 50px;
 }
 
+h4 {
+  display: flex;
+}
+
 .col-8 {
   background-color: white;
   padding: 50px 50px 50px 50px;
@@ -27,12 +31,11 @@ h1 {
 }
 
 .password-options {
-  display: flex;
   flex-wrap: wrap;
-  padding: 20px;
-  border: 1px solid black;
+  padding: 40px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
   border-radius: 15px;
-  width: inherit;
 }
 
 .container-fluid {
@@ -40,11 +43,19 @@ h1 {
 }
 
 .slider-container {
-  height: 80px;
+  margin-top: 10px;
+  height: 140px;
   width: 380px;
-  background-color: #fff;
+  border: 2px solid #eaeaea;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
   border-radius: 10px;
-  padding: 0 65px 0 45px;
+  padding: 0 50px 0 35px;
+  
+}
+
+#label-text {
+  display: flex;
+  margin-top: 40px;
 }
 
 .slider-value {
@@ -52,13 +63,13 @@ h1 {
   width: 100%;
 }
 
-.slider-value span {
+span {
   position: absolute;
   height: 45px;
   width: 45px;
   color: #fff;
   font-weight: 500;
-  top: -40px;
+  top: 0px;
   transform: translateX(-70%);
   transform-origin: bottom;
   line-height: 55px;
@@ -66,7 +77,7 @@ h1 {
 
 }
 
-.slider-value span:after {
+span:after {
   position: absolute;
   content: "";
   height: 100%;
@@ -102,7 +113,7 @@ h1 {
 }
 
 .right {
-  right: -43px;
+  right: -35px;
 }
 
 .slider-container input {
@@ -117,8 +128,8 @@ h1 {
 
 .slider-container input::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   background: #664AFF;
   border-radius: 50%;
   border: 1px solid #664AFF;
@@ -127,8 +138,8 @@ h1 {
 
 .slider-container input::-moz-range-thumb {
   -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   background: #664AFF;
   border-radius: 50%;
   border: 1px solid #664AFF;
