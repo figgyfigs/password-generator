@@ -11,6 +11,7 @@ html, body {
   width: 100%;
   margin: 0;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -19,6 +20,22 @@ h1 {
 
 h4 {
   display: flex;
+}
+
+.custom-control {
+  width: 350px;
+  font-size: 15px;
+
+  border: 1px solid #eaeaea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+  left: 400px;
+  bottom: 35px;
+}
+
+.custom-control-label {
+
+  padding-right: 50px;
+  padding-top: 3px;
 }
 
 .col-8 {
@@ -33,7 +50,7 @@ h4 {
 .password-options {
   flex-wrap: wrap;
   padding: 40px;
-  border: 1px solid #eaeaea;
+  border: 2px solid #eaeaea;
   box-shadow: 0 2px 8px rgba(0,0,0,.15);
   border-radius: 15px;
 }
