@@ -10,7 +10,7 @@ html, body {
   width: 100%;
   margin: 0;
   text-align: center;
-  flex-wrap: rap;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -19,20 +19,24 @@ h1 {
 
 h4 {
   display: flex;
+  
 }
+
+
 
 .col-8 {
   background-color: white;
-  padding: 150px;
+  padding: 130px;
 }
 
 .checkbox-container {
   position: relative;
   padding: 20px;
   width: 40%;
-  height: 140px;
+  height: 60%;
   left: 50%;
-  bottom: 140px;
+  top: 30%;
+  bottom: 160px;
   border: 2px solid #eaeaea;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
@@ -74,8 +78,10 @@ h4 {
 }
 
 #label-text {
+  width: 200px;
+  padding-bottom: 20px;
   display: flex;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .slider-value {
@@ -199,4 +205,30 @@ h4 {
 
 .container:hover input ~ .checkmark {
   background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 3px;
+  width: 8px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
