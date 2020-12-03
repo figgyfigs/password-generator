@@ -10,7 +10,7 @@ html, body {
   width: 100%;
   margin: 0;
   text-align: center;
-  flex-wrap: wrap;
+  flex-wrap: rap;
 }
 
 h1 {
@@ -23,24 +23,20 @@ h4 {
 
 .col-8 {
   background-color: white;
-  padding: 50px 50px 50px 50px;
+  padding: 150px;
 }
 
 .checkbox-container {
   position: relative;
   padding: 20px;
-  width: 380px;
+  width: 40%;
   height: 140px;
-  left: 40%;
+  left: 50%;
   bottom: 140px;
   border: 2px solid #eaeaea;
+  border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
   text-align: left;
-}
-
-.custom-control-input {
-  position: relative;
-  padding: 20px;
 }
 
 .row {
@@ -49,6 +45,7 @@ h4 {
 
 .password-options {
   position: relative;
+  height: 350px;
   padding: 40px;
   border: 2px solid #eaeaea;
   box-shadow: 0 2px 8px rgba(0,0,0, .15);
@@ -62,8 +59,9 @@ h4 {
 .slider-container {
   position: relative;
   margin-top: 10px;
+  margin-right: 20px;
   height: 140px;
-  width: 380px;
+  width: 40%;
   border: 2px solid #eaeaea;
   box-shadow: 0 2px 8px rgba(0,0,0,.15);
   border-radius: 10px;
@@ -166,4 +164,39 @@ h4 {
   border-radius: 50%;
   border: 1px solid #664AFF;
   cursor: pointer;
+}
+
+/*
+  CSS for the checkbox-container
+*/
+.container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
 }
