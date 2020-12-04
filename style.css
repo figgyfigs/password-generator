@@ -14,7 +14,7 @@ html, body {
 }
 
 h1 {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 h4 {
@@ -26,7 +26,7 @@ h4 {
 
 .col-8 {
   background-color: white;
-  padding: 130px;
+  padding-top: 100px;
 }
 
 .checkbox-container {
@@ -49,6 +49,7 @@ h4 {
 
 .password-options {
   position: relative;
+  max-width: 800px;
   height: 350px;
   padding: 40px;
   border: 2px solid #eaeaea;
@@ -56,9 +57,6 @@ h4 {
   border-radius: 15px;
 }
 
-.container-fluid {
-  background-color: #F5A623;
-}
 
 .slider-container {
   position: relative;
@@ -232,3 +230,28 @@ h4 {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+/* CSS for box that will show the users password */
+
+.card {
+  max-width: 800px;
+  border: 2px solid #eaeaea;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+  font-size: 18px;
+  padding: 30px 40px;
+  margin-bottom: 40px;
+}
+
+.card-title::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-body {
+  min-height: 120px;
+}
+

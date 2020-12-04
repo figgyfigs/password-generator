@@ -6,7 +6,7 @@ input_value.oninput = (() => {
   let value = input_value.value;
   slider_value.textContent = value;
 
-  slider_value.style.left = (value * 2) + "%";
+  slider_value.style.left = (value * 1.99) + "%";
 });
 
 // Write password to the #password input
