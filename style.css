@@ -5,12 +5,10 @@
 }
 
 html, body {
-  display: grid;
   height: 100%;
   width: 100%;
   margin: 0;
   text-align: center;
-  flex-wrap: wrap;
 }
 
 h1 {
@@ -19,14 +17,20 @@ h1 {
 
 h4 {
   display: flex;
-  
+}
+
+.container-main {
+  margin: auto;
+  max-width: 900px;
+  padding: 30px;
 }
 
 
 
 .col-8 {
   background-color: white;
-  padding-top: 100px;
+  margin: auto;
+  max-width: 50%;
 }
 
 .checkbox-container {
