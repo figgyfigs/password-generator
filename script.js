@@ -2,6 +2,11 @@ var generateBtn = document.querySelector("#generate");
 
 const slider_value = document.querySelector("span")
 const input_value = document.querySelector("input")
+
+const alphabet = ["abcdefghijklmnopqrstuvwxyz"];
+const numbers = ["0123456789"];
+const symbols = ["!@#$%&*?<>"];
+
 input_value.oninput = (() => {
   let value = input_value.value;
   slider_value.textContent = value;
