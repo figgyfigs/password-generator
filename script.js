@@ -20,6 +20,10 @@ function getLowerCase() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
+function getUpperCase() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
