@@ -24,6 +24,10 @@ function getUpperCase() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
 
+function getNumber() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -38,3 +42,5 @@ function generatePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
