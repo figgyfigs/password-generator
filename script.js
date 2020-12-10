@@ -14,6 +14,12 @@ input_value.oninput = (() => {
   slider_value.style.left = (value * 1.99) + "%";
 });
 
+//Returns a lower case letter. 26 is the range we would like to choose from (number of letters in the alphabet) 
+//and 97 is where we would like to start. 97 is where the lower case letters begin in the UTF-16 table.
+function getLowerCase() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
