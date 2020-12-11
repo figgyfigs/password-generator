@@ -3,16 +3,21 @@ var generateBtn = document.querySelector("#generate");
 const slider_value = document.querySelector("span")
 const input_value = document.querySelector("input")
 
-const alphabet = ["abcdefghijklmnopqrstuvwxyz"];
-const numbers = ["0123456789"];
-const symbols = ["!@#$%&*?<>"];
-
 input_value.oninput = (() => {
   let value = input_value.value;
   slider_value.textContent = value;
 
   slider_value.style.left = (value * 1.99) + "%";
 });
+
+//Getting all DOM elements needed 
+
+const uppercaseElement = document.getElementById("uppercase");
+const lowercaseElement = document.getElementById("lowercase");
+const numberElement = document.getElementById("number");
+const symbolElement = document.getElementById("symbol");
+
+console.log(uppercaseElement);
 
 //Returns a lower case letter. 26 is the range we would like to choose from (number of letters in the alphabet) 
 //and 97 is where we would like to start. 97 is where the lower case letters begin in the UTF-16 table.
