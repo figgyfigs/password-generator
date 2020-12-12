@@ -10,7 +10,7 @@ input_value.oninput = (() => {
   slider_value.style.left = (value * 1.99) + "%";
 });
 
-//Getting all DOM elements needed 
+//Getting all DOM elements needed
 
 const uppercaseElement = document.getElementById("uppercase");
 const lowercaseElement = document.getElementById("lowercase");
@@ -19,7 +19,7 @@ const symbolElement = document.getElementById("symbol");
 
 console.log(uppercaseElement);
 
-//Returns a lower case letter. 26 is the range we would like to choose from (number of letters in the alphabet) 
+//Returns a lower case letter. 26 is the range we would like to choose from (number of letters in the alphabet)
 //and 97 is where we would like to start. 97 is where the lower case letters begin in the UTF-16 table.
 function getLowerCase() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -34,7 +34,7 @@ function getNumber() {
 }
 
 function getSymbol() {
-  const symbols = '~@=$%&+-*?!#';
+  const symbols = '~@=$%&+-*>?!#<';
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
@@ -47,10 +47,8 @@ function writePassword() {
 }
 
 function generatePassword() {
-  
+
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
+//generateBtn.addEventListener("click", writePassword);
