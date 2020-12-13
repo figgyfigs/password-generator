@@ -39,6 +39,7 @@ function writePassword() {
 }
 
 function generatePassword() {
+  
 }
 
 function slider() {
