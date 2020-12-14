@@ -11,6 +11,17 @@ const numberElement = document.getElementById("number");
 const symbolElement = document.getElementById("symbol");
 
 
+// Object cointaining the checkboxes options the user can choose from
+characters = {
+  uppercase: getUpperCase,
+  lowecase: getLowerCase,
+  number: getNumber,
+  symbol: getSymbol
+};
+
+console.log(characters.uppercase);
+
+
 //Returns a lower case letter. 26 is the range we would like to choose from (number of letters in the alphabet)
 //and 97 is where we would like to start. 97 is where the lower case letters begin in the UTF-16 table.
 function getLowerCase() {
