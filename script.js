@@ -1,4 +1,4 @@
-
+//this is a test comment
 
 //calling slider function
 slider();
@@ -39,7 +39,7 @@ function writePassword() {
 }
 
 function generatePassword() {
-  
+
 }
 
 function slider() {
