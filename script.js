@@ -16,7 +16,7 @@ const symbolElement = document.getElementById("symbol");
 // Object cointaining the checkboxes options the user can choose from
 characters = {
   uppercase: getUpperCase,
-  lowecase: getLowerCase,
+  lowercase: getLowerCase,
   number: getNumber,
   symbol: getSymbol
 };
@@ -43,7 +43,7 @@ function getSymbol() {
 
 // Write password to the #password input
 function writePassword() {
-  // checked is a boolean. Returns true if the checkbox is checked. False if is unchecked. 
+  // checked is a boolean. Returns true if the checkbox is checked. False if it is unchecked. 
   const length = lengthElement.value;
   console.log(length);
   const includeUpper = uppercaseElement.checked;
@@ -51,7 +51,6 @@ function writePassword() {
   const includeLower = lowercaseElement.checked;
   const includeNumber = numberElement.checked;
   const includeSymbol = symbolElement.checked;
-
   var password = generatePassword(length, includeUpper, includeLower, includeNumber,includeNumber, includeSymbol);
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
@@ -59,7 +58,17 @@ function writePassword() {
 }
 
 function generatePassword(length, uppercase, lowercase, number, symbol) {
+  let userPassword = "";
+  const charArray = [{uppercase}, {lowercase}, {number}, {symbol}];
+  var sum = 0;
+  charArray.forEach(function(el) {
+    sum += Object.values(el)[0];
+  })
+  console.log(sum);
+  console.log(charArray);
+
   
+
   return "Password output goes here";
 }
 
