@@ -64,10 +64,12 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
   charArray.forEach(function(el) {
     sum += Object.values(el)[0];
   })
-  console.log(sum);
-  console.log(charArray);
 
-  
+  if(sum === 0) {
+    return "";
+  }
+
+
 
   return "Password output goes here";
 }
