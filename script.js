@@ -45,19 +45,22 @@ function getSymbol() {
 function writePassword() {
   // checked is a boolean. Returns true if the checkbox is checked. False if is unchecked. 
   const length = lengthElement.value;
+  console.log(length);
   const includeUpper = uppercaseElement.checked;
+  console.log(includeUpper);
   const includeLower = lowercaseElement.checked;
   const includeNumber = numberElement.checked;
   const includeSymbol = symbolElement.checked;
 
-  var password = generatePassword(length);
+  var password = generatePassword(length, includeUpper, includeLower, includeNumber,includeNumber, includeSymbol);
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
 }
 
-function generatePassword(length) {
-  return "Password " + length;
+function generatePassword(length, uppercase, lowercase, number, symbol) {
+  
+  return "Password output goes here";
 }
 
 function slider() {
