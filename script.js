@@ -63,16 +63,19 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
   var sum = 0;
   charArray.forEach(function(type) {
     sum += Object.values(type)[0];
-    testArr = charArray.filter(type => Object.values(type)[0]);
+    // trueArray contains all the fields that are true. 
+    // i.e. whtat chars the user wants in his password
+    trueArray = charArray.filter(type => Object.values(type)[0]);
   });
 
   if(sum === 0) {
     return "";
   }
 
-  //for(let i = 0; i < length; i++) {
-    //charArray.forEach(type => )
-  //}
+  //looping over trueArray so we can generate random characters for each true value
+  for(let i = 0; i < length; i++) {
+    trueArray.forEach(type => )
+  }
 
 
 
