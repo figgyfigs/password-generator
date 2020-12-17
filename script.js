@@ -80,8 +80,8 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
       userPassword += characters[generateChars]();
     });
   }
-
-  console.log(userPassword.split(""));
+  console.log(userPassword);
+  console.log(userPassword.split("").slice(0, length));
 }
 
 function slider() {
