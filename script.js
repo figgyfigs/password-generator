@@ -81,7 +81,7 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
     });
   }
 
-  return userPassword;
+  console.log(userPassword.split(""));
 }
 
 function slider() {
