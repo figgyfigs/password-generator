@@ -61,13 +61,18 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
   let userPassword = "";
   const charArray = [{uppercase}, {lowercase}, {number}, {symbol}];
   var sum = 0;
-  charArray.forEach(function(el) {
-    sum += Object.values(el)[0];
-  })
+  charArray.forEach(function(type) {
+    sum += Object.values(type)[0];
+    testArr = charArray.filter(type => Object.values(type)[0]);
+  });
 
   if(sum === 0) {
     return "";
   }
+
+  //for(let i = 0; i < length; i++) {
+    //charArray.forEach(type => )
+  //}
 
 
 
