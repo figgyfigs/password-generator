@@ -81,7 +81,7 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
     });
   }
   console.log(userPassword);
-  console.log(userPassword.split("").slice(0, length));
+  console.log(userPassword.split("").slice(0, length).join(""));
 }
 
 function slider() {
@@ -92,7 +92,7 @@ function slider() {
     let value = input_value.value;
     slider_value.textContent = value;
 
-    slider_value.style.left = (value * 1.99) + "%";
+    slider_value.style.left = (value * 3.2) + "%";
   });
 }
 
