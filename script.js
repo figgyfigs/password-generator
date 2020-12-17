@@ -72,14 +72,16 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
     return "";
   }
 
-  //looping over trueArray so we can generate random characters for each true value
+  // looping over trueArray so we can generate random characters for each true value
+  // this generates a long string that we will need to 
   for(let i = 0; i < length; i++) {
-    trueArray.forEach(type => )
+    trueArray.forEach(type => {
+      const generateChars = Object.keys(type)[0];
+      userPassword += characters[generateChars]();
+    });
   }
 
-
-
-  return "Password output goes here";
+  return userPassword;
 }
 
 function slider() {
