@@ -81,10 +81,16 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
     });
   }
   console.log(userPassword);
-  console.log(userPassword.split("").slice(0, length).sort(() => Math.random() - 0.5).join(""));
+  //console.log(userPassword.split("").slice(0, length).sort(() => Math.random() - 0.5).join(""));
+  console.log(userPassword.split("").slice(0, length));
 }
 
-function shuffle() {
+var testingArray = ["S", "b", "6", "=", "N", "i", "2", "*", "L", "a"];
+console.log(shuffle(testingArray));
+function shuffle(array) {
+  const length = array.length;
+  console.log(length);
+
 
 }
 
