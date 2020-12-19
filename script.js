@@ -73,7 +73,7 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
   }
 
   // looping over trueArray so we can generate random characters for each true value
-  // this generates a long string that we will need to 
+  // this generates a long string that we will need to be sliced
   for(let i = 0; i < length; i++) {
     trueArray.forEach(type => {
       const generateChars = Object.keys(type)[0];
@@ -81,7 +81,11 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
     });
   }
   console.log(userPassword);
-  console.log(userPassword.split("").slice(0, length).join(""));
+  console.log(userPassword.split("").slice(0, length).sort(() => Math.random() - 0.5).join(""));
+}
+
+function shuffle() {
+
 }
 
 function slider() {
@@ -92,7 +96,7 @@ function slider() {
     let value = input_value.value;
     slider_value.textContent = value;
 
-    slider_value.style.left = (value * 3.2) + "%";
+    slider_value.style.left = (value * 3.5) + "%";
   });
 }
 
