@@ -45,9 +45,7 @@ function getSymbol() {
 function writePassword() {
   // checked is a boolean. Returns true if the checkbox is checked. False if it is unchecked. 
   const length = lengthElement.value;
-  console.log(length);
   const includeUpper = uppercaseElement.checked;
-  console.log(includeUpper);
   const includeLower = lowercaseElement.checked;
   const includeNumber = numberElement.checked;
   const includeSymbol = symbolElement.checked;
@@ -85,13 +83,26 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
   console.log(userPassword.split("").slice(0, length));
 }
 
-var testingArray = ["S", "b", "6", "=", "N", "i", "2", "*", "L", "a"];
-console.log(shuffle(testingArray));
+var testingArray = ["S", "b", "6", "=", "N", "i", "2", "*"];
+shuffle(testingArray);
+console.log(testingArray);
 function shuffle(array) {
-  const length = array.length;
-  console.log(length);
+  //const currIndex, length, temp;
+  let currIndex = array.length;
+  let tempValue;
+  let randomIndex;
 
+  while(0 !== currIndex) {
+    randomIndex = Math.floor(Math.random() * currIndex);
+    console.log(randomIndex);
+    currIndex -= 1;
 
+    tempValue = array[currIndex];
+    array[currIndex] = array[randomIndex];
+    array[randomIndex] = tempValue;
+  }
+
+  return array;
 }
 
 function slider() {
