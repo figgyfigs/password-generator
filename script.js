@@ -78,23 +78,21 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
       userPassword += characters[generateChars]();
     });
   }
-  console.log(userPassword);
   //console.log(userPassword.split("").slice(0, length).sort(() => Math.random() - 0.5).join(""));
-  console.log(userPassword.split("").slice(0, length));
+  userPassword = userPassword.split("").slice(0, length);
+  let shuffledArray = shuffle(userPassword);
+  return shuffledArray.join("");
+  //console.log(userPassword.split("").slice(0, length));
 }
 
-var testingArray = ["S", "b", "6", "=", "N", "i", "2", "*"];
-shuffle(testingArray);
-console.log(testingArray);
 function shuffle(array) {
   //const currIndex, length, temp;
   let currIndex = array.length;
   let tempValue;
   let randomIndex;
 
-  while(0 !== currIndex) {
+  while(currIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currIndex);
-    console.log(randomIndex);
     currIndex -= 1;
 
     tempValue = array[currIndex];
