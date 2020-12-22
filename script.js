@@ -1,5 +1,3 @@
-//this is a test comment
-
 //calling slider function
 slider();
 
@@ -41,9 +39,9 @@ function getSymbol() {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-// Write password to the #password input
+//Displays password in the appropiate text area
 function writePassword() {
-  // checked is a boolean. Returns true if the checkbox is checked. False if it is unchecked. 
+  // checked is a boolean. Returns true if the checkbox is checked. False if unchecked. 
   const length = lengthElement.value;
   const includeUpper = uppercaseElement.checked;
   const includeLower = lowercaseElement.checked;
@@ -55,6 +53,7 @@ function writePassword() {
 
 }
 
+//generates the users random password and returns it
 function generatePassword(length, uppercase, lowercase, number, symbol) {
   let userPassword = "";
   const charArray = [{uppercase}, {lowercase}, {number}, {symbol}];
@@ -78,11 +77,10 @@ function generatePassword(length, uppercase, lowercase, number, symbol) {
       userPassword += characters[generateChars]();
     });
   }
-  //console.log(userPassword.split("").slice(0, length).sort(() => Math.random() - 0.5).join(""));
+
   userPassword = userPassword.split("").slice(0, length);
   let shuffledArray = shuffle(userPassword);
   return shuffledArray.join("");
-  //console.log(userPassword.split("").slice(0, length));
 }
 
 function shuffle(array) {
