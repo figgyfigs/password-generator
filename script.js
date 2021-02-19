@@ -1,6 +1,3 @@
-//calling slider function
-slider();
-
 //Getting all DOM elements needed
 const generateBtn = document.getElementById("generate");
 const lengthElement = document.querySelector(".slider");
@@ -9,8 +6,6 @@ const lowercaseElement = document.getElementById("lowercase");
 const numberElement = document.getElementById("number");
 const symbolElement = document.getElementById("symbol");
 
-
-
 // Object cointaining the checkboxes options the user can choose from
 characters = {
   uppercase: getUpperCase,
@@ -18,7 +13,6 @@ characters = {
   number: getNumber,
   symbol: getSymbol
 };
-
 
 //Returns a lower case letter. 26 is the range we would like to choose from (number of letters in the alphabet)
 //and 97 is where we would like to start. 97 is where the lower case letters begin in the UTF-16 table.
@@ -50,7 +44,6 @@ function writePassword() {
   var password = generatePassword(length, includeUpper, includeLower, includeNumber,includeNumber, includeSymbol);
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-
 }
 
 //generates the users random password and returns it
@@ -101,16 +94,28 @@ function shuffle(array) {
   return array;
 }
 
-function slider() {
-  const slider_value = document.querySelector("span")
-  const input_value = document.querySelector("input")
+// function slider() {
+//   const slider_value = document.querySelector("span")
+//   const input_value = document.querySelector("input")
 
-  input_value.oninput = (() => {
-    let value = input_value.value;
-    slider_value.textContent = value;
+//   input_value.oninput = (() => {
+//     let value = input_value.value;
+//     slider_value.textContent = value;
 
-    slider_value.style.left = (value * 3.5) + "%";
-  });
+//     slider_value.style.left = (value * 3.5) + "%";
+//   });
+// }
+
+const input_value = document.getElementById("my-range");
+const slider_value = document.getElementById("length-value");
+
+
+input_value.addEventListener("input", showSliderValue, false);
+
+function showSliderValue() {
+  slider_value.innerHTML = input_value.value;
+  var bulletPosition = (input_value.value / input_value.max);
+  slider_value.style.left = (bulletPosition * 180 + "px");
 }
 
 // Add event listener to generate button

@@ -11,6 +11,10 @@ html, body {
   text-align: center;
 }
 
+body {
+  background:#ffd89b;
+}
+
 h1 {
   margin-top: 40px;
 }
@@ -19,18 +23,24 @@ h4 {
   display: flex;
 }
 
+label {
+  color: #fff;
+}
+
+button {
+  background: #19547b;
+  color: #eee;
+}
+
+.text {
+  color: #fff
+}
+
 .container-main {
   margin: auto;
   max-width: 900px;
   padding: 30px;
-}
-
-
-
-.col-8 {
-  background-color: white;
-  margin: auto;
-  max-width: 50%;
+  background: #19547b;
 }
 
 .checkbox-container {
@@ -41,7 +51,7 @@ h4 {
   left: 50%;
   top: 30%;
   bottom: 160px;
-  border: 2px solid #eaeaea;
+  border: 2px solid #ffd89b;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
   text-align: left;
@@ -51,12 +61,24 @@ h4 {
   height: 100%;
 }
 
+#password {
+  width: 450px;
+  height: 50px;
+  resize: none;
+  text-align: center;
+  border: none;
+  color: #19547b;
+  background: #ffd89b;
+  border-radius: 5px;
+  line-height: 45px;
+}
+
 .password-options {
   position: relative;
   max-width: 800px;
   height: 350px;
   padding: 40px;
-  border: 2px solid #eaeaea;
+  border: 2px solid #ffd89b;
   box-shadow: 0 2px 8px rgba(0,0,0, .15);
   border-radius: 15px;
 }
@@ -68,7 +90,7 @@ h4 {
   margin-right: 20px;
   height: 140px;
   width: 40%;
-  border: 2px solid #eaeaea;
+  border: 2px solid #ffd89b;
   box-shadow: 0 2px 8px rgba(0,0,0,.15);
   border-radius: 10px;
   padding: 0 50px 0 35px;
@@ -76,7 +98,8 @@ h4 {
 }
 
 .legnth-container {
-  position: absolute;
+  position: relative;
+  /* height: 300px; */
 }
 
 #label-text {
@@ -89,20 +112,27 @@ h4 {
 .slider-value {
   position: relative;
   width: 100%;
+  /* width: 200px; */
 }
 
 #length-value {
   position: absolute;
   height: 45px;
   width: 45px;
-  color: #fff;
+  color: #19547b;
   font-weight: 500;
   top: 0px;
   transform: translateX(-70%);
   transform-origin: bottom;
-  line-height: 55px;
+  line-height: 45px;
   z-index: 2;
+  text-align: end;
+}
 
+#generate {
+  width: 500px;
+  height: 80px;
+  border-radius: 5px;
 }
 
 #length-value:after {
@@ -110,11 +140,12 @@ h4 {
   content: "";
   height: 100%;
   width: 100%;
-  background: #664AFF;
-  left: 50%;
+  background: #ffd89b;
+  /* left: 50%; */
+  left: 80%;
   transform: translateX(-50%) rotate(45deg);
   box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
-  border: 3px solid #fff;
+  border: 3px solid #eee;
   z-index: -1;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
@@ -133,7 +164,7 @@ h4 {
   position: absolute;
   font-size: 18px;
   font-weight: 600;
-  color: #664AFF;
+  color: #ffd89b;
 }
 
 .left {
@@ -147,8 +178,9 @@ h4 {
 .slider-container .slider {
   -webkit-appearance: none;
   height: 3px;
-  width: 100%;
-  background: #ddd;
+  /* width: 100%; */
+  width: 220px;
+  background: #eee;
   border-radius: 5px;
   outline: none;
   border: none;
@@ -158,9 +190,9 @@ h4 {
   -webkit-appearance: none;
   height: 15px;
   width: 15px;
-  background: #664AFF;
+  background: #ffd89b;
   border-radius: 50%;
-  border: 1px solid #664AFF;
+  border: 1px solid #ffd89b;
   cursor: pointer;
 }
 
@@ -168,15 +200,16 @@ h4 {
   -webkit-appearance: none;
   height: 15px;
   width: 15px;
-  background: #664AFF;
+  background: #ffd89b;
   border-radius: 50%;
-  border: 1px solid #664AFF;
+  border: 1px solid #ffd89b;
   cursor: pointer;
 }
 
 /*
   CSS for the checkbox-container
 */
+
 .container {
   display: block;
   position: relative;
@@ -228,7 +261,7 @@ h4 {
   top: 3px;
   width: 8px;
   height: 15px;
-  border: solid white;
+  border: solid #ffd89b;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -239,12 +272,13 @@ h4 {
 
 .card {
   max-width: 800px;
-  border: 2px solid #eaeaea;
+  border: 2px solid #ffd89b;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
   font-size: 18px;
   padding: 30px 40px;
   margin-bottom: 40px;
+  background: #19547b;
 }
 
 .card-title::after {

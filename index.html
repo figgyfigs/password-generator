@@ -12,7 +12,7 @@
     <div class="container-main">
 
         <div class="card">
-          <div class="card-title">
+          <div class="card-title text">
             <h2>Generate a Secure Password</h2>
           </div>
           <div class="card-body">
@@ -21,15 +21,16 @@
         </div>
 
         <form class="password-options">
-          <h4><strong>Customize your password</strong></h4>
+          <h4 class="text"><strong>Customize your password</strong></h4>
 
           <div class="length-container">
-            <label id="label-text" for="password-length"><strong>Password length</strong></label>
+            <label class="text" id="label-text" for="password-length"><strong>Password length</strong></label>
+
             <div class="slider-container">
-              <div class="slider-value"> <span id="length-value">10</span></div>
+              <div class="slider-value"><span id="length-value">15</span></div>
               <div class="field">
-                <div class="value left">5</div>
-                  <input class="slider" type="range" id="my-range" min="5" max="30" value="{{" steps="1">
+                <div class="value left">0</div>
+                  <input class="slider" type="range" id="my-range" min="0" max="30" value="15" steps="1">
                 <div class="value right">30</div>
               </div>
             </div>
@@ -56,18 +57,12 @@
                 <span class="checkmark"></span>
               </label>
             </div>
-
+            <button id="generate" type="button" name="generate">Generate Password</button>
         </div>
-        <button id="generate" type="button" name="generate">Generate Password</button>
+
         </form>
-
-
-
     </div>
-
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
